@@ -53,6 +53,12 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  // Element Styles
+  body {
+    min-height: 100vh;
+    background-color: ${({theme}) => theme.colors.darkBlue};
+  }
 `;
 
 export default GlobalStyle;
