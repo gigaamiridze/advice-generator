@@ -56,8 +56,15 @@ const GlobalStyle = createGlobalStyle`
 
   // Element Styles
   body {
-    min-height: 100vh;
+    height: 100vh;
     background-color: ${({theme}) => theme.colors.darkBlue};
+  }
+
+  #root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
