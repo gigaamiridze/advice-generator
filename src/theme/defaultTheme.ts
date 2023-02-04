@@ -1,4 +1,4 @@
-interface Theme {
+export interface Theme {
   colors: {
     lightCyan: string;
     neonGreen: string;
