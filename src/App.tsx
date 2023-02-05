@@ -6,6 +6,7 @@ import { defaultTheme } from './theme/defaultTheme';
 import GlobalStyle from './components/GlobalStyle';
 import AdviceCard from './components/AdviceCard';
 import Title from './components/Title';
+import Text from './components/Text';
 
 function App() {
   return (
@@ -16,6 +17,11 @@ function App() {
       </Helmet>
       <AdviceCard>
         <Title>advice #177</Title>
+        <Text>
+          “It is easy to sit up and take
+          notice, what’s difficult is getting
+          up and taking action.”
+        </Text>
       </AdviceCard>
     </ThemeProvider>
   )

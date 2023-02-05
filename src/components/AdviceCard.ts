@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const AdviceCard = styled.div`
-  max-width: 500px;
+  max-width: 445px;
   width: 100%;
   background-color: ${({theme}) => theme.colors.darkGrayishBlue};
-  border-radius: 10px;
-  padding: 48px;
+  border-radius: 13px;
+  padding: 40px;
   text-align: center;
 `;
 
