@@ -2,11 +2,13 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { defaultTheme } from './theme/defaultTheme';
+import divider from './assets/svg/pattern-divider.svg';
 // Importing Components
 import GlobalStyle from './components/GlobalStyle';
 import AdviceCard from './components/AdviceCard';
 import Title from './components/Title';
 import Text from './components/Text';
+import Image from './components/Image';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           notice, what’s difficult is getting
           up and taking action.”
         </Text>
+        <Image src={divider} alt="Divider" />
       </AdviceCard>
     </ThemeProvider>
   )
