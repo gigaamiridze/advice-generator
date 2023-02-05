@@ -15,16 +15,24 @@ import Text from './components/Text';
 import Divider from './components/Divider';
 import RefreshBox from './components/RefreshBox';
 import Dice from './components/Dice';
+import Loading from './components/Loading';
 
 function App() {
   const [slip, setSlip] = useState({} as Slip);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const getAdvice = async () => {
-    const response = await axios.get('https://api.adviceslip.com/advice');
-    const data = await response.data.slip;
-    setSlip(data);
+    try {
+      setLoading(true);
+      const response = await axios.get('https://api.adviceslip.com/advice');
+      const data = await response.data.slip;
+      setSlip(data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   }
-    
+
   useEffect(() => {
     getAdvice();
   }, []);
@@ -35,13 +43,16 @@ function App() {
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
       </Helmet>
-      <AdviceCard 
-        initial={{ scale: 0.8 }} 
+      <AdviceCard
+        initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
       >
         <Title>advice #{slip.id}</Title>
-        <Text>“{slip.advice}”</Text>
+        {loading 
+          ? <Loading /> 
+          : <Text>“{slip.advice}”</Text>
+        }
         <Divider src={divider} alt="Divider" />
         <RefreshBox onClick={getAdvice}>
           <Dice src={dice} alt="Dice" />

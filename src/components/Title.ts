@@ -6,6 +6,7 @@ const Title = styled.h3`
   letter-spacing: 3px;
   text-transform: uppercase;
   color: ${({theme}) => theme.colors.neonGreen};
+  margin-bottom: 20px;
 `;
 
 export default Title;
