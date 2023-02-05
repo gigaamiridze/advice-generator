@@ -5,8 +5,9 @@ const AdviceCard = styled.div`
   width: 100%;
   background-color: ${({theme}) => theme.colors.darkGrayishBlue};
   border-radius: 13px;
-  padding: 40px;
+  padding: 40px 40px 60px 40px;
   text-align: center;
+  position: relative;
 `;
 
 export default AdviceCard;
