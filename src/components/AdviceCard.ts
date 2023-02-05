@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const AdviceCard = styled.div`
+const AdviceCard = styled(motion.div)`
   max-width: 445px;
   width: 100%;
   background-color: ${({theme}) => theme.colors.darkGrayishBlue};

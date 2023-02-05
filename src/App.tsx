@@ -21,7 +21,11 @@ function App() {
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
       </Helmet>
-      <AdviceCard>
+      <AdviceCard 
+        initial={{ scale: 0.8 }} 
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
         <Title>advice #177</Title>
         <Text>
           “It is easy to sit up and take
@@ -30,7 +34,7 @@ function App() {
         </Text>
         <Divider src={divider} alt="Divider" />
         <RefreshBox>
-          <Dice src={dice} alt="dice" />
+          <Dice src={dice} alt="Dice" />
         </RefreshBox>
       </AdviceCard>
     </ThemeProvider>
