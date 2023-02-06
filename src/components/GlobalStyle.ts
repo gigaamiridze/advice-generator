@@ -66,6 +66,10 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 480px) {
+      padding: 0 20px;
+    }
   }
 `;
 

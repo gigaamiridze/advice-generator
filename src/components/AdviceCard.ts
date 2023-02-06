@@ -6,9 +6,13 @@ const AdviceCard = styled(motion.div)`
   width: 100%;
   background-color: ${({theme}) => theme.colors.neutral.darkGrayishBlue};
   border-radius: 13px;
-  padding: 40px 40px 60px 40px;
+  padding: 40px 40px 60px;
   text-align: center;
   position: relative;
+
+  @media (max-width: 375px) {
+    padding: 30px 20px 50px;
+  }
 `;
 
 export default AdviceCard;

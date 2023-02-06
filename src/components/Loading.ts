@@ -12,13 +12,18 @@ const Loading = styled.span`
   margin-top: 5px;
 
   @keyframes rotation {
-  0% {
-    transform: rotate(0deg);
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  100% {
-    transform: rotate(360deg);
+
+  @media (max-width: 375) {
+    width: 40px;
+    height: 40px;
   }
-} 
 `;
 
 export default Loading;

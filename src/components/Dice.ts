@@ -10,6 +10,11 @@ const Dice = styled.img`
   &:hover {
     box-shadow: 0 0 25px ${({theme}) => theme.colors.primary.neonGreen};
   }
+
+  @media (max-width: 375px) {
+    width: 55px;
+    height: 55px;
+  }
 `;
 
 export default Dice;
