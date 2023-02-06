@@ -16,10 +16,12 @@ import Divider from './components/Divider';
 import RefreshBox from './components/RefreshBox';
 import Dice from './components/Dice';
 import Loading from './components/Loading';
+import Error from './components/Error';
 
 function App() {
   const [slip, setSlip] = useState({} as Slip);
   const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
 
   const getAdvice = async () => {
     try {
@@ -28,7 +30,9 @@ function App() {
       const data = await response.data.slip;
       setSlip(data);
       setLoading(false);
+      setError(false);
     } catch (error) {
+      setError(true);
       setLoading(false);
     }
   }
@@ -49,10 +53,9 @@ function App() {
         transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
       >
         <Title>advice #{slip.id}</Title>
-        {loading 
-          ? <Loading /> 
-          : <Text>“{slip.advice}”</Text>
-        }
+        {error && <Error>Oops, Error happened. Plaese try again later!</Error>}
+        {loading && <Loading />}
+        {(!loading && !error) && <Text>“{slip.advice}”</Text>}
         <Divider src={divider} alt="Divider" />
         <RefreshBox onClick={getAdvice}>
           <Dice src={dice} alt="Dice" />

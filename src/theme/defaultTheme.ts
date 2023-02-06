@@ -5,6 +5,7 @@ export interface Theme {
     grayishBlue: string;
     darkGrayishBlue: string;
     darkBlue: string;
+    red: string;
   },
   fonts: {
     manrope: string;
@@ -18,6 +19,7 @@ export const defaultTheme: Theme = {
     grayishBlue: "#4E5D73",
     darkGrayishBlue: "#323A49",
     darkBlue: "#1F2632",
+    red: "hsl(0, 100%, 66%)",
   },
   fonts: {
     manrope: 'Manrope',
