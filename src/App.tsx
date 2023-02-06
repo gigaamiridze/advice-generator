@@ -53,7 +53,7 @@ function App() {
         transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
       >
         <Title>advice #{slip.id}</Title>
-        {error && <Error>Oops, Error happened. Plaese try again later!</Error>}
+        {error && <Error>Oops, Error happened. Please try again later!</Error>}
         {loading && <Loading />}
         {(!loading && !error) && <Text>“{slip.advice}”</Text>}
         <Divider src={divider} alt="Divider" />
