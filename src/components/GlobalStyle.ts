@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
   // Element Styles
   body {
     height: 100vh;
-    background-color: ${({theme}) => theme.colors.darkBlue};
+    background-color: ${({theme}) => theme.colors.neutral.darkBlue};
     font-family: ${({theme}) => theme.fonts.manrope};
   }
 

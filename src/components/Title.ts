@@ -5,7 +5,7 @@ const Title = styled.h3`
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: ${({theme}) => theme.colors.neonGreen};
+  color: ${({theme}) => theme.colors.primary.neonGreen};
   margin-bottom: 20px;
 `;
 

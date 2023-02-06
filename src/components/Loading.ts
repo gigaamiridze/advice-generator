@@ -5,7 +5,7 @@ const Loading = styled.span`
   height: 48px;
   border-radius: 50%;
   display: inline-block;
-  border-top: 3px solid ${({theme}) => theme.colors.neonGreen};
+  border-top: 3px solid ${({theme}) => theme.colors.primary.neonGreen};
   border-right: 3px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;

@@ -8,7 +8,7 @@ const Dice = styled.img`
   transition: box-shadow .25s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 25px ${({theme}) => theme.colors.neonGreen};
+    box-shadow: 0 0 25px ${({theme}) => theme.colors.primary.neonGreen};
   }
 `;
 
